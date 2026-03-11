@@ -16,8 +16,8 @@ priority: high
 
 ## Where to start
 - [[AI Engineering - Course Home]]
-- [AI Engineering - 80-20 Summary]]
-- [AI Engineering - Roadmap]]
+- [[AI Engineering - 80-20 Summary]]
+- [[AI Engineering - Roadmap]]
 
 ## Main topic clusters
 
@@ -37,6 +37,7 @@ priority: high
 - concurrency
 - memory bottlenecks
 - GPU utilization
+- [[Topic - LLM Inference Path, KV Cache, and Batching]]
 
 ### vLLM and optimization
 - why vLLM exists
@@ -84,6 +85,17 @@ priority: high
 - reliability
 - fallbacks
 - safety
+
+## Built notes in this cluster
+
+### Topic notes
+- [[Topic - LLM Inference Path, KV Cache, and Batching]]
+
+### Source notes
+- [[Source - Kwon et al. 2023 - Efficient Memory Management for Large Language Model Serving with PagedAttention]]
+- [[Source - Hugging Face - KV Cache Strategies and Cache Explanation]]
+- [[Source - NVIDIA - Prefill, Decode, In-flight Batching, and Chunked Prefill]]
+- [[Source - vLLM - Features, Architecture, Metrics, and Tuning]]
 
 ## What to add next
 - topic notes for each main cluster
