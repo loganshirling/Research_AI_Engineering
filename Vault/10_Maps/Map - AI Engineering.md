@@ -55,6 +55,7 @@ priority: high
 - tool use
 - workflow prompts
 - prompt brittleness
+- prompt-only baselines before tuning
 
 ### Evaluation
 - task definitions
@@ -72,14 +73,19 @@ priority: high
 - reranking
 - context assembly
 - grounding failures
+- retrieval as a knowledge lever
 - [[Topic - Common RAG Failure Modes]]
 
 ### Model customization
 - fine-tuning
 - SFT
 - adapters and LoRA
+- PEFT
 - data quality
 - overfitting risk
+- deployment tradeoffs for tuned models
+- [[Topic - When to Fine-Tune vs When Not To]]
+- [[Topic - Adapters, LoRA, and PEFT Tradeoffs]]
 
 ### Production operations
 - observability
@@ -98,6 +104,8 @@ priority: high
 - [[Topic - Eval Design for Serving Changes]]
 - [[Topic - Common RAG Failure Modes]]
 - [[Topic - Production Bottlenecks and Observability for LLM Systems]]
+- [[Topic - When to Fine-Tune vs When Not To]]
+- [[Topic - Adapters, LoRA, and PEFT Tradeoffs]]
 
 ### Source notes
 - [[Source - Kwon et al. 2023 - Efficient Memory Management for Large Language Model Serving with PagedAttention]]
@@ -108,8 +116,10 @@ priority: high
 - [[Source - Eval Design for Serving Changes - Core Sources]]
 - [[Source - Common RAG Failure Modes - Core Sources]]
 - [[Source - Production Bottlenecks and Observability - Core Sources]]
+- [[Source - Fine-Tuning Decision Framework - Core Sources]]
+- [[Source - Adapters, LoRA, and PEFT - Core Sources]]
 
 ## What to add next
-- when to fine-tune vs when not to
 - practice notes for benchmarking and failure analysis
 - practice notes for RAG diagnostics and incident reviews
+- practice note for prompt / retrieval / tuning decision drills
