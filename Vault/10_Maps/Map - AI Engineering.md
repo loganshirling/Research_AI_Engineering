@@ -38,6 +38,7 @@ priority: high
 - memory bottlenecks
 - GPU utilization
 - [[Topic - LLM Inference Path, KV Cache, and Batching]]
+- [[Topic - Quantization Tradeoffs for LLM Inference]]
 
 ### vLLM and optimization
 - why vLLM exists
@@ -62,6 +63,7 @@ priority: high
 - human review
 - error taxonomy
 - failure clustering
+- [[Topic - Eval Design for Serving Changes]]
 
 ### Retrieval systems
 - chunking
@@ -90,16 +92,19 @@ priority: high
 
 ### Topic notes
 - [[Topic - LLM Inference Path, KV Cache, and Batching]]
+- [[Topic - Quantization Tradeoffs for LLM Inference]]
+- [[Topic - Eval Design for Serving Changes]]
 
 ### Source notes
 - [[Source - Kwon et al. 2023 - Efficient Memory Management for Large Language Model Serving with PagedAttention]]
 - [[Source - Hugging Face - KV Cache Strategies and Cache Explanation]]
 - [[Source - NVIDIA - Prefill, Decode, In-flight Batching, and Chunked Prefill]]
 - [[Source - vLLM - Features, Architecture, Metrics, and Tuning]]
+- [[Source - Quantization for LLM Inference - Core Sources]]
+- [[Source - Eval Design for Serving Changes - Core Sources]]
 
 ## What to add next
-- topic notes for each main cluster
-- concept notes for key terms
-- technique notes for build workflows
-- source notes tied to specific papers, docs, and benchmarks
-- practice notes for drills and mini-projects
+- common RAG failure modes
+- when to fine-tune vs when not to
+- production bottlenecks and observability patterns
+- practice notes for benchmarking and failure analysis
