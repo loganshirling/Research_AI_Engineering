@@ -72,6 +72,7 @@ priority: high
 - reranking
 - context assembly
 - grounding failures
+- [[Topic - Common RAG Failure Modes]]
 
 ### Model customization
 - fine-tuning
@@ -87,6 +88,7 @@ priority: high
 - reliability
 - fallbacks
 - safety
+- [[Topic - Production Bottlenecks and Observability for LLM Systems]]
 
 ## Built notes in this cluster
 
@@ -94,6 +96,8 @@ priority: high
 - [[Topic - LLM Inference Path, KV Cache, and Batching]]
 - [[Topic - Quantization Tradeoffs for LLM Inference]]
 - [[Topic - Eval Design for Serving Changes]]
+- [[Topic - Common RAG Failure Modes]]
+- [[Topic - Production Bottlenecks and Observability for LLM Systems]]
 
 ### Source notes
 - [[Source - Kwon et al. 2023 - Efficient Memory Management for Large Language Model Serving with PagedAttention]]
@@ -102,9 +106,10 @@ priority: high
 - [[Source - vLLM - Features, Architecture, Metrics, and Tuning]]
 - [[Source - Quantization for LLM Inference - Core Sources]]
 - [[Source - Eval Design for Serving Changes - Core Sources]]
+- [[Source - Common RAG Failure Modes - Core Sources]]
+- [[Source - Production Bottlenecks and Observability - Core Sources]]
 
 ## What to add next
-- common RAG failure modes
 - when to fine-tune vs when not to
-- production bottlenecks and observability patterns
 - practice notes for benchmarking and failure analysis
+- practice notes for RAG diagnostics and incident reviews
