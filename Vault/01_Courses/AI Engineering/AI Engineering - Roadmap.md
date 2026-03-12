@@ -6,12 +6,13 @@ topic: AI Engineering
 course: AI Engineering
 tags: [roadmap, ai-engineering]
 prerequisites: []
-related: [[AI Engineering - Course Home]], [[AI Engineering - 80-20 Summary]], [[Map - AI Engineering]]
+related: [[AI Engineering - Course Home]], [[AI Engineering - 80-20 Summary]], [[Map - AI Engineering]], [[AI Engineering Practice]]
 sources: []
 last_updated: 2026-03-11
 review_status: seed
 priority: high
 ---
+
 # AI Engineering - Roadmap
 
 ## Phase 1 - Foundations
@@ -92,6 +93,9 @@ Deliverables:
 - compare runs
 - identify whether problems come from model choice, prompt design, retrieval, or system wiring
 
+Practice:
+- [[Practice - Benchmarking and Failure Analysis Drills]]
+
 ## Phase 6 - RAG and retrieval systems
 
 Learn:
@@ -109,6 +113,9 @@ Deliverables:
 - inspect bad retrieval examples
 - understand why retrieval quality often matters more than fancier generation logic
 
+Practice:
+- [[Practice - RAG Diagnostics and Incident Reviews]]
+
 ## Phase 7 - Fine-tuning and adapters
 
 Learn:
@@ -123,6 +130,9 @@ Deliverables:
 - explain the decision logic before tuning
 - understand the data and eval burden fine-tuning adds
 - distinguish “model customization” from “system design”
+
+Practice:
+- [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
 
 ## Phase 8 - Production operations
 
@@ -140,6 +150,28 @@ Deliverables:
 - describe the minimum telemetry needed to operate a system
 - avoid the most common early production mistakes
 
+Practice:
+- [[Practice - Benchmarking and Failure Analysis Drills]]
+- [[Practice - RAG Diagnostics and Incident Reviews]]
+
+## Phase 9 - Deliberate practice and incident review
+
+Learn:
+- how to choose the smallest lever that could solve a problem
+- how to write decision memos before implementing changes
+- how to inspect traces, retrieval artifacts, and rollout metrics
+- how to connect eval design to rollout safety
+
+Deliverables:
+- write short decision memos from ambiguous scenarios
+- diagnose failures from traces and benchmark summaries
+- propose rollback-safe next experiments instead of vague redesigns
+
+Practice sequence:
+1. [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
+2. [[Practice - Benchmarking and Failure Analysis Drills]]
+3. [[Practice - RAG Diagnostics and Incident Reviews]]
+
 ## Recommended build sequence
 
 Build in this order:
@@ -150,3 +182,4 @@ Build in this order:
 5. local or self-hosted open-weight model path
 6. vLLM-backed serving experiment
 7. targeted fine-tuning only if justified
+8. deliberate practice through decision and incident drills
