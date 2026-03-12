@@ -9,7 +9,7 @@ prerequisites: []
 related: [[AI Engineering - Course Home]], [[AI Engineering - 80-20 Summary]], [[Map - AI Engineering]], [[AI Engineering Practice]]
 sources: []
 last_updated: 2026-03-11
-review_status: seed
+review_status: researched
 priority: high
 ---
 
@@ -18,21 +18,23 @@ priority: high
 ## Phase 1 - Foundations
 
 Learn:
-- what a token is
-- how context windows shape behavior and cost
-- the difference between training, fine-tuning, and inference
+
+- what tokens and tokenization are
 - what embeddings are for
-- what attention and transformers do at a high level
-- why latency, throughput, memory, and quality are in tension
+- how transformer attention creates context dependence
+- why context windows shape both behavior and cost
+- why prefill and decode feel different to users
 
 Deliverables:
-- define the major terms in plain language
+
 - explain the request path from prompt to generated output
-- compare closed API vs open-weight deployment
+- explain why long prompts and long chats are expensive
+- describe how embeddings support semantic retrieval
 
 ## Phase 2 - Inference and serving
 
 Learn:
+
 - model loading
 - GPU memory pressure
 - batching
@@ -42,144 +44,137 @@ Learn:
 - model serving basics
 
 Deliverables:
-- explain why serving is not just “run the model”
+
+- explain why serving is not just "run the model"
 - identify likely bottlenecks in a simple deployment
 - describe why some systems optimize throughput while others optimize tail latency
 
-## Phase 3 - vLLM and performance optimization
+## Phase 3 - Retrieval systems
 
 Learn:
-- why vLLM exists
-- paged attention at a practical level
-- memory utilization patterns
-- continuous batching
-- quantization tradeoffs
-- speculative decoding concepts
-- practical throughput tuning
+
+- chunking
+- metadata
+- embeddings
+- vector search
+- hybrid retrieval
+- reranking
+- context packing
+- citation grounding
 
 Deliverables:
-- explain when vLLM is a good default
-- understand how it differs from naive inference servers
-- identify tradeoffs among quality, speed, cost, and hardware limits
 
-## Phase 4 - Prompting and structured outputs
+- build a simple RAG pipeline
+- inspect bad retrieval examples
+- diagnose whether a retrieval problem is chunking, search mode, ranking, or packing
+
+Practice:
+
+- [[Practice - RAG Diagnostics and Incident Reviews]]
+
+## Phase 4 - Prompting, tool use, and structured outputs
 
 Learn:
+
 - prompt design basics
-- role/system instructions
 - tool use
 - JSON and schema-constrained outputs
-- guardrails
-- prompt brittleness
+- workflow prompts
+- loop control
+- validation boundaries
 
 Deliverables:
+
 - design prompts that are stable enough for automation
 - reduce formatting failure and hallucinated structure
-- reason about prompt changes systematically
+- reason about when a tool call is safer than free-form generation
 
-## Phase 5 - Evaluation and failure analysis
+## Phase 5 - Evaluation and model selection
 
 Learn:
+
 - task definition
 - golden sets
 - regression testing
 - rubric-based evaluation
 - human evaluation
-- failure clustering
-- error taxonomy
+- model comparison
+- tradeoff scorecards
 
 Deliverables:
+
 - create a small eval set
-- compare runs
-- identify whether problems come from model choice, prompt design, retrieval, or system wiring
+- compare candidate models
+- explain why a model wins or loses for a specific product context
 
 Practice:
+
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 
-## Phase 6 - RAG and retrieval systems
+## Phase 6 - Customization
 
 Learn:
-- chunking
-- embeddings
-- vector search
-- retrieval quality
-- reranking
-- citation grounding
-- context packing
-- common retrieval failures
 
-Deliverables:
-- build a simple RAG pipeline
-- inspect bad retrieval examples
-- understand why retrieval quality often matters more than fancier generation logic
-
-Practice:
-- [[Practice - RAG Diagnostics and Incident Reviews]]
-
-## Phase 7 - Fine-tuning and adapters
-
-Learn:
-- when fine-tuning is worth it
 - when prompting is enough
-- SFT basics
-- LoRA or adapters
-- data quality issues
-- overfitting and evaluation after tuning
+- when retrieval is enough
+- when tool use is enough
+- when fine-tuning is justified
+- LoRA and PEFT tradeoffs
+- post-tuning eval burden
 
 Deliverables:
+
 - explain the decision logic before tuning
-- understand the data and eval burden fine-tuning adds
-- distinguish “model customization” from “system design”
+- understand the data and evaluation burden tuning adds
+- distinguish model customization from system design
 
 Practice:
+
 - [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
 
-## Phase 8 - Production operations
+## Phase 7 - Production operations
 
 Learn:
-- observability
-- cost tracking
+
 - latency budgets
+- observability
+- token and unit cost tracking
 - reliability
-- rate limiting
-- abuse and safety considerations
+- guardrails
+- prompt injection
+- output validation
 - fallbacks and rollback plans
 
 Deliverables:
+
 - reason about production readiness
 - describe the minimum telemetry needed to operate a system
 - avoid the most common early production mistakes
 
-Practice:
-- [[Practice - Benchmarking and Failure Analysis Drills]]
-- [[Practice - RAG Diagnostics and Incident Reviews]]
-
-## Phase 9 - Deliberate practice and incident review
+## Phase 8 - Deliberate practice and teaching compression
 
 Learn:
-- how to choose the smallest lever that could solve a problem
-- how to write decision memos before implementing changes
-- how to inspect traces, retrieval artifacts, and rollout metrics
-- how to connect eval design to rollout safety
+
+- how to write short decision memos
+- how to diagnose failures from traces and retrieval artifacts
+- how to compress a section into a NotebookLM packet
+- how to track sections as episode-sized learning units
 
 Deliverables:
-- write short decision memos from ambiguous scenarios
-- diagnose failures from traces and benchmark summaries
-- propose rollback-safe next experiments instead of vague redesigns
 
-Practice sequence:
-1. [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
-2. [[Practice - Benchmarking and Failure Analysis Drills]]
-3. [[Practice - RAG Diagnostics and Incident Reviews]]
+- write short decision memos from ambiguous scenarios
+- produce packet files that teach one coherent lesson
+- connect practice notes back into source and topic notes
 
 ## Recommended build sequence
 
 Build in this order:
+
 1. small API prototype
 2. structured output workflow
 3. simple eval harness
 4. simple RAG system
-5. local or self-hosted open-weight model path
-6. vLLM-backed serving experiment
-7. targeted fine-tuning only if justified
-8. deliberate practice through decision and incident drills
+5. tool-using workflow
+6. local or self-hosted open-weight model path
+7. serving and latency instrumentation
+8. targeted fine-tuning only if justified
