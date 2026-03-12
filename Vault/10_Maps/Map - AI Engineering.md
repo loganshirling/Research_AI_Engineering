@@ -6,18 +6,20 @@ topic: AI Engineering
 course: AI Engineering
 tags: [map, ai-engineering]
 prerequisites: []
-related: [[AI Engineering - Course Home]], [[AI Engineering - Roadmap]], [[AI Engineering - 80-20 Summary]]
+related: [[AI Engineering - Course Home]], [[AI Engineering - Roadmap]], [[AI Engineering - 80-20 Summary]], [[AI Engineering Practice]]
 sources: []
 last_updated: 2026-03-11
 review_status: seed
 priority: high
 ---
+
 # Map - AI Engineering
 
 ## Where to start
 - [[AI Engineering - Course Home]]
 - [[AI Engineering - 80-20 Summary]]
 - [[AI Engineering - Roadmap]]
+- [[AI Engineering Practice]]
 
 ## Main topic clusters
 
@@ -119,7 +121,13 @@ priority: high
 - [[Source - Fine-Tuning Decision Framework - Core Sources]]
 - [[Source - Adapters, LoRA, and PEFT - Core Sources]]
 
+### Practice notes
+- [[AI Engineering Practice]]
+- [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
+- [[Practice - Benchmarking and Failure Analysis Drills]]
+- [[Practice - RAG Diagnostics and Incident Reviews]]
+
 ## What to add next
-- practice notes for benchmarking and failure analysis
-- practice notes for RAG diagnostics and incident reviews
-- practice note for prompt / retrieval / tuning decision drills
+- review notes that compress each major cluster into fast recall prompts
+- worked examples for rollout decisions, benchmark interpretation, and incident writeups
+- one or two end-to-end synthesis notes tying serving, retrieval, evals, and tuning together
