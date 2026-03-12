@@ -14,6 +14,7 @@ related:
   - "[[Practice - Benchmarking and Failure Analysis Drills]]"
   - "[[Practice - RAG Diagnostics and Incident Reviews]]"
   - "[[Practice - Advanced Systems Architecture Drills]]"
+  - "[[Practice - End-to-End Build - Internal Research Assistant]]"
 sources: []
 last_updated: 2026-03-12
 review_status: researched
@@ -38,6 +39,7 @@ The topic notes explain concepts. The practice notes force you to use those conc
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 - [[Practice - RAG Diagnostics and Incident Reviews]]
 - [[Practice - Advanced Systems Architecture Drills]]
+- [[Practice - End-to-End Build - Internal Research Assistant]]
 
 ## Suggested order
 
@@ -45,6 +47,7 @@ The topic notes explain concepts. The practice notes force you to use those conc
 2. [[Practice - Benchmarking and Failure Analysis Drills]]
 3. [[Practice - RAG Diagnostics and Incident Reviews]]
 4. [[Practice - Advanced Systems Architecture Drills]]
+5. [[Practice - End-to-End Build - Internal Research Assistant]]
 
 ## How to use these notes
 
@@ -62,7 +65,7 @@ You are improving when you can:
 - distinguish model issues from system-design issues,
 - define an eval before proposing a change,
 - explain what data would change your mind,
-- and propose a rollback-safe next step instead of a vague optimization idea.
+[- and propose a rollback-safe next step instead of a vague optimization idea.
 
 ## Related notes
 
