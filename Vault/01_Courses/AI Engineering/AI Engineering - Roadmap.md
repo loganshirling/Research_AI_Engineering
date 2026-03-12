@@ -55,6 +55,8 @@ Learn:
 - chunking,
 - metadata,
 - embeddings,
+- vector databases and ANN indexes,
+- filtering and access scope,
 - vector search,
 - hybrid retrieval,
 - reranking,
@@ -64,10 +66,16 @@ Learn:
 Deliverables:
 - build a simple RAG pipeline,
 - inspect bad retrieval examples,
-- diagnose whether the problem is chunking, search mode, ranking, or packing.
+- diagnose whether the problem is chunking, metadata, vector-database/index behavior, search mode, ranking, or packing,
+- explain when a vector database matters and when it does not.
 
 Practice:
 - [[Practice - RAG Diagnostics and Incident Reviews]]
+
+Core notes:
+- [[Topic - Retrieval System Design for RAG]]
+- [[Topic - Vector Databases, Embeddings, and Retrieval Tradeoffs]]
+- [[Concept - Vector Databases, ANN Indexes, and Filtering]]
 
 ## Phase 4 - Prompting, tool use, and structured outputs
 
@@ -103,29 +111,46 @@ Deliverables:
 Practice:
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 
+Techniques:
+- [[Technique - Model Selection Scorecard]]
+- [[Technique - Eval Operations]]
+
 ## Phase 6 - Advanced systems and agent operations
 
 Learn:
 - vLLM, PagedAttention, prefix caching, and continuous batching,
 - context engineering and prompt caching,
+- AI agent design, boundaries, and harnesses,
+- approvals and control-flow design,
+- observability and failure handling for long-running agents,
+- vector-database tradeoffs inside larger retrieval systems,
 - handoffs and deterministic workflow design,
 - MCP and tool security,
 - eval flywheels and regression gates,
 - multimodal document pipelines,
 - realtime voice systems,
+- self-hosted/personal agent architecture through the OpenClaw case study,
 - and end-to-end build patterns.
 
 Deliverables:
 - explain when modern serving is bottlenecked by queueing, prefill, decode, or cache pressure,
 - explain why larger context does not remove the need for curation,
 - decide what should stay deterministic in an agent workflow,
-- define approval and logging requirements for risky tools,
+- define approval, logging, and monitoring requirements for risky tools,
 - turn observed failures into regression gates,
 - separate document retrieval from page-level visual understanding,
+- explain the trust-boundary and security implications of self-hosted personal agents,
 - and sketch a voice-agent architecture with recovery behavior.
 
-Core note:
+Core notes:
 - [[Topic - Advanced Systems, Agents, Multimodal, and Voice]]
+- [[Topic - AI Agents: Design, Boundaries, and Operations]]
+- [[Topic - OpenClaw and Self-Hosted Personal Agents]]
+
+Techniques:
+- [[Technique - Context Budgeting]]
+- [[Technique - Agent Approval Design]]
+- [[Technique - Eval Operations]]
 
 Practice:
 - [[Practice - Advanced Systems Architecture Drills]]
@@ -152,7 +177,9 @@ Build in this order:
 4. simple RAG system,
 5. tool-using workflow,
 6. local or self-hosted open-weight model path,
-7. advanced systems module on serving, context, and orchestration,
-8. document or multimodal workflow,
-9. voice or realtime system if justified,
-10. end-to-end build notes with traces, evals, and rollback logic.
+7. retrieval upgrade with vector database and hybrid search decisions,
+8. advanced systems module on serving, context, and orchestration,
+9. controlled agent workflow with approvals and eval operations,
+10. document or multimodal workflow,
+11. voice or realtime system if justified,
+12. end-to-end build notes with traces, evals, and rollback logic.
