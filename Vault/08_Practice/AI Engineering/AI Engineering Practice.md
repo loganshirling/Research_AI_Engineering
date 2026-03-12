@@ -15,6 +15,8 @@ related:
   - "[[Practice - RAG Diagnostics and Incident Reviews]]"
   - "[[Practice - Advanced Systems Architecture Drills]]"
   - "[[Practice - End-to-End Build - Internal Research Assistant]]"
+  - "[[Practice - End-to-End Build - Multimodal Document Operations Copilot]]"
+  - "[[Practice - End-to-End Build - Approval-Gated Operations Agent]]"
 sources: []
 last_updated: 2026-03-12
 review_status: researched
@@ -35,11 +37,16 @@ The topic notes explain concepts. The practice notes force you to use those conc
 
 ## Practice notes in this cluster
 
+### Decision drills
 - [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 - [[Practice - RAG Diagnostics and Incident Reviews]]
 - [[Practice - Advanced Systems Architecture Drills]]
+
+### End-to-end build track
 - [[Practice - End-to-End Build - Internal Research Assistant]]
+- [[Practice - End-to-End Build - Multimodal Document Operations Copilot]]
+- [[Practice - End-to-End Build - Approval-Gated Operations Agent]]
 
 ## Suggested order
 
@@ -48,6 +55,8 @@ The topic notes explain concepts. The practice notes force you to use those conc
 3. [[Practice - RAG Diagnostics and Incident Reviews]]
 4. [[Practice - Advanced Systems Architecture Drills]]
 5. [[Practice - End-to-End Build - Internal Research Assistant]]
+6. [[Practice - End-to-End Build - Multimodal Document Operations Copilot]]
+7. [[Practice - End-to-End Build - Approval-Gated Operations Agent]]
 
 ## How to use these notes
 
@@ -58,6 +67,13 @@ For each drill:
 4. compare your answer against the success criteria,
 5. note what assumption was wrong.
 
+For each build note:
+1. define the product goal,
+2. name the dominant failure cost,
+3. keep the first architecture reviewable,
+4. define what stays deterministic,
+5. define evals and rollback triggers before expansion.
+
 ## What good progress looks like
 
 You are improving when you can:
@@ -65,7 +81,7 @@ You are improving when you can:
 - distinguish model issues from system-design issues,
 - define an eval before proposing a change,
 - explain what data would change your mind,
-[- and propose a rollback-safe next step instead of a vague optimization idea.
+- and propose a rollback-safe next step instead of a vague optimization idea.
 
 ## Related notes
 
