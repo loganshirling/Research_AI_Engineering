@@ -68,10 +68,21 @@ priority: high
 
 ## Advanced systems expansion
 
-- [[Topic - Advanced Systems, Agents, Multimodal, and Voice]]
+- [[Topic - Advanced Systems, Agents, Multimodal, and Voice]] (overview)
+- [[Topic - vLLM, PagedAttention, Prefix Caching, and Continuous Batching]]
+- [[Topic - Context Engineering, Prompt Caching, and Long-Context Tradeoffs]]
+- [[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]]
+- [[Topic - MCP, Tool Design, and Secure Agent Execution]]
+- [[Topic - Eval Flywheels, Human Review, and Regression Gates]]
+- [[Topic - Multimodal Document and Image Pipelines]]
+- [[Topic - Realtime Voice Agents and Speech-to-Speech Systems]]
+- [[Topic - End-to-End AI System Case Studies and Build Patterns]]
 - [[Source - Advanced Systems Expansion - Core Sources]]
-- [[Practice - Advanced Systems Architecture Drills]]
 - [[Packet - AI Engineering - Section 02 - Advanced Systems and Agent Operations]]
+
+## Build track (first wave)
+
+- [[Practice - End-to-End Build - Internal Research Assistant]]
 
 ## Existing practice notes
 
@@ -79,9 +90,11 @@ priority: high
 - [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 - [[Practice - RAG Diagnostics and Incident Reviews]]
+- [[Practice - Advanced Systems Architecture Drills]]
+- [[Practice - End-to-End Build - Internal Research Assistant]]
 
 ## What to add next
 
-- technique notes for context budgeting, eval operations, and agent approvals,
-- end-to-end build notes tying retrieval, tools, evals, and observability together,
-- and episode tracking notes for the new packet section.
+- the second and third build-note capstones
+- technique notes for eval operations, agent approvals, and context budgeting
+- and episode tracking notes for the new build track
