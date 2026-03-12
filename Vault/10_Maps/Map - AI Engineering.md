@@ -11,6 +11,7 @@ related:
   - "[[AI Engineering - Roadmap]]"
   - "[[AI Engineering - 80-20 Summary]]"
   - "[[AI Engineering Practice]]"
+  - "[[Review - AI Engineering - Course Review Checklist]]"
 sources: []
 last_updated: 2026-03-12
 review_status: researched
@@ -25,6 +26,17 @@ priority: high
 - [[AI Engineering - 80-20 Summary]]
 - [[AI Engineering - Roadmap]]
 - [[AI Engineering Practice]]
+- [[Review - AI Engineering - Course Review Checklist]]
+
+## Folder indexes
+
+- Topics: `Vault/02_Topics/AI Engineering/README.md`
+- Concepts: `Vault/03_Concepts/AI Engineering/README.md`
+- Techniques: `Vault/04_Techniques/AI Engineering/README.md`
+- Sources: `Vault/06_Sources/AI Engineering/README.md`
+- Reviews: `Vault/09_Reviews/AI Engineering/README.md`
+- Packets: `Vault/01_Courses/AI Engineering/Packets/README.md`
+- Episodes: `Vault/01_Courses/AI Engineering/Episodes/README.md`
 
 ## Foundations
 
@@ -33,6 +45,9 @@ priority: high
 - [[Concept - Embeddings and Vector Similarity]]
 - [[Concept - Transformer Architecture and Attention]]
 - [[Concept - Context Windows, Prefill, and Decode]]
+
+### Review
+- [[Review - AI Engineering - Foundations Checkpoint]]
 
 ## Inference and serving
 
@@ -46,6 +61,9 @@ priority: high
 - [[Topic - Hybrid Search and Reranking]]
 - [[Topic - Common RAG Failure Modes]]
 
+### Review
+- [[Review - AI Engineering - Retrieval and RAG Checkpoint]]
+
 ## Prompting and workflows
 
 - [[Topic - Tool Calling, Structured Outputs, and Agent Loops]]
@@ -54,6 +72,9 @@ priority: high
 
 - [[Topic - Eval Design for Serving Changes]]
 - [[Topic - Model Selection, Benchmarking, and Tradeoff Triage]]
+
+### Review
+- [[Review - AI Engineering - Evaluation, Safety, and Operations Checkpoint]]
 
 ## Customization
 
@@ -83,11 +104,25 @@ priority: high
 - [[Source - Advanced Systems Expansion - Core Sources]]
 - [[Packet - AI Engineering - Section 02 - Advanced Systems and Agent Operations]]
 
-## Build track (first wave)
+### Review
+- [[Review - AI Engineering - Advanced Systems and Agent Operations Checkpoint]]
 
+## Build track
+
+### Practice builds
 - [[Practice - End-to-End Build - Internal Research Assistant]]
 - [[Practice - End-to-End Build - Multimodal Document Operations Copilot]]
 - [[Practice - End-to-End Build - Approval-Gated Operations Agent]]
+
+### Build-track packets
+- [[Packet - AI Engineering - Build Track 01 - Internal Research Assistant]]
+- [[Packet - AI Engineering - Build Track 02 - Multimodal Document Operations Copilot]]
+- [[Packet - AI Engineering - Build Track 03 - Approval-Gated Operations Agent]]
+
+### Episode notes
+- [[Episode - AI Engineering - Build Track 01 - Internal Research Assistant]]
+- [[Episode - AI Engineering - Build Track 02 - Multimodal Document Operations Copilot]]
+- [[Episode - AI Engineering - Build Track 03 - Approval-Gated Operations Agent]]
 
 ## Existing practice notes
 
@@ -99,9 +134,3 @@ priority: high
 - [[Practice - End-to-End Build - Internal Research Assistant]]
 - [[Practice - End-to-End Build - Multimodal Document Operations Copilot]]
 - [[Practice - End-to-End Build - Approval-Gated Operations Agent]]
-
-## What to add next
-
-- NotebookLM packet files for the build-track capstones if you want dedicated audio-teaching versions of each build
-- a short build-track comparison note that explains when to choose the research assistant, multimodal document copilot, or approval-gated operations agent pattern
-- and a review rubric note that can be reused across capstone builds for goal clarity, dominant failure cost, eval quality, approval design, and rollback readiness
