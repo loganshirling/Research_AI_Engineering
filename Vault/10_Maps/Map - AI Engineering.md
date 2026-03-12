@@ -6,9 +6,13 @@ topic: AI Engineering
 course: AI Engineering
 tags: [map, ai-engineering]
 prerequisites: []
-related: [[AI Engineering - Course Home]], [[AI Engineering - Roadmap]], [[AI Engineering - 80-20 Summary]], [[AI Engineering Practice]]
+related:
+  - "[[AI Engineering - Course Home]]"
+  - "[[AI Engineering - Roadmap]]"
+  - "[[AI Engineering - 80-20 Summary]]"
+  - "[[AI Engineering Practice]]"
 sources: []
-last_updated: 2026-03-11
+last_updated: 2026-03-12
 review_status: researched
 priority: high
 ---
@@ -27,6 +31,8 @@ priority: high
 ### Concepts
 - [[Concept - Tokens and Tokenization]]
 - [[Concept - Embeddings and Vector Similarity]]
+- [[Concept - Transformer Architecture and Attention]]
+- [[Concept - Context Windows, Prefill, and Decode]]
 
 ## Inference and serving
 
@@ -40,7 +46,7 @@ priority: high
 - [[Topic - Hybrid Search and Reranking]]
 - [[Topic - Common RAG Failure Modes]]
 
-## Prompting, tools, and workflows
+## Prompting and workflows
 
 - [[Topic - Tool Calling, Structured Outputs, and Agent Loops]]
 
@@ -60,29 +66,22 @@ priority: high
 - [[Topic - LLM Observability and Tracing]]
 - [[Topic - Latency Engineering for LLM Systems]]
 
-## Techniques
+## Advanced systems expansion
 
-- [[Technique - Model Selection Scorecard]]
-- [[Technique - Latency Budget Worksheet]]
-- [[Technique - Retrieval Triage Checklist]]
+- [[Topic - Advanced Systems, Agents, Multimodal, and Voice]]
+- [[Source - Advanced Systems Expansion - Core Sources]]
+- [[Practice - Advanced Systems Architecture Drills]]
+- [[Packet - AI Engineering - Section 02 - Advanced Systems and Agent Operations]]
 
-## Practice notes
+## Existing practice notes
 
 - [[AI Engineering Practice]]
 - [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 - [[Practice - RAG Diagnostics and Incident Reviews]]
 
-## Packet workflow
-
-- [[Packet - AI Engineering - Practitioner Systems Foundations]]
-- [[Episode - Practitioner Systems Foundations]]
-
-## Source notes
-
-- [[Source - Practitioner Systems Expansion - Core Sources]]
-
 ## What to add next
 
-- case-study notes tying incidents to retrieval, tool use, and serving decisions
-- one or two end-to-end build notes that connect APIs, retrieval, evals, and observability into a single working system
+- technique notes for context budgeting, eval operations, and agent approvals,
+- end-to-end build notes tying retrieval, tools, evals, and observability together,
+- and episode tracking notes for the new packet section.
