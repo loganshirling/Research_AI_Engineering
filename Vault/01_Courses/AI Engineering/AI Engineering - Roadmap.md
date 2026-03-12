@@ -11,6 +11,7 @@ related:
   - "[[AI Engineering - 80-20 Summary]]"
   - "[[Map - AI Engineering]]"
   - "[[AI Engineering Practice]]"
+  - "[[Review - AI Engineering - Course Review Checklist]]"
 sources: []
 last_updated: 2026-03-12
 review_status: researched
@@ -19,167 +20,94 @@ priority: high
 
 # AI Engineering - Roadmap
 
+## First-pass order
+
+1. Foundations concepts
+2. Retrieval systems
+3. Evaluation, safety, and observability
+4. Advanced systems and agent operations
+5. Practice drills
+6. Build track
+
 ## Phase 1 - Foundations
+Read:
+- [[Concept - Tokens and Tokenization]]
+- [[Concept - Transformer Architecture and Attention]]
+- [[Concept - Context Windows, Prefill, and Decode]]
+- [[Concept - Embeddings and Vector Similarity]]
 
-Learn:
-- tokens and tokenization,
-- embeddings,
-- transformer attention,
-- context windows,
-- prefill and decode.
+Checkpoint:
+- [[Review - AI Engineering - Foundations Checkpoint]]
 
-Deliverables:
-- explain the request path from prompt to output,
-- explain why long prompts are expensive,
-- describe how embeddings support semantic retrieval.
-
-## Phase 2 - Inference and serving
-
-Learn:
-- model loading,
-- GPU memory pressure,
-- batching,
-- KV cache,
-- concurrency,
-- quantization,
-- model serving basics.
-
-Deliverables:
-- explain why serving is not just "run the model,"
-- identify likely bottlenecks in a deployment,
-- explain why different systems optimize throughput vs tail latency differently.
-
-## Phase 3 - Retrieval systems
-
-Learn:
-- chunking,
-- metadata,
-- embeddings,
-- vector databases and ANN indexes,
-- filtering and access scope,
-- vector search,
-- hybrid retrieval,
-- reranking,
-- context packing,
-- citation grounding.
-
-Deliverables:
-- build a simple RAG pipeline,
-- inspect bad retrieval examples,
-- diagnose whether the problem is chunking, metadata, vector-database/index behavior, search mode, ranking, or packing,
-- explain when a vector database matters and when it does not.
+## Phase 2 - Retrieval systems
+Read:
+- [[Topic - Retrieval System Design for RAG]]
+- [[Topic - Hybrid Search and Reranking]]
+- [[Topic - Common RAG Failure Modes]]
+- [[Technique - Retrieval Triage Checklist]]
 
 Practice:
 - [[Practice - RAG Diagnostics and Incident Reviews]]
 
-Core notes:
-- [[Topic - Retrieval System Design for RAG]]
-- [[Topic - Vector Databases, Embeddings, and Retrieval Tradeoffs]]
-- [[Concept - Vector Databases, ANN Indexes, and Filtering]]
+Checkpoint:
+- [[Review - AI Engineering - Retrieval and RAG Checkpoint]]
 
-## Phase 4 - Prompting, tool use, and structured outputs
-
-Learn:
-- prompt design basics,
-- tool use,
-- JSON and schema-constrained outputs,
-- workflow prompts,
-- loop control,
-- validation boundaries.
-
-Deliverables:
-- design prompts that are stable enough for automation,
-- reduce formatting failures and hallucinated structure,
-- reason about when a tool call is safer than free-form generation.
-
-## Phase 5 - Evaluation and model selection
-
-Learn:
-- task definition,
-- gold sets,
-- regression testing,
-- rubric-based evaluation,
-- human evaluation,
-- model comparison,
-- tradeoff scorecards.
-
-Deliverables:
-- create a small eval set,
-- compare candidate models,
-- explain why a model wins or loses for a specific product context.
+## Phase 3 - Evaluation, safety, and operations
+Read:
+- [[Topic - Eval Design for Serving Changes]]
+- [[Topic - Eval Flywheels, Human Review, and Regression Gates]]
+- [[Topic - Model Selection, Benchmarking, and Tradeoff Triage]]
+- [[Topic - Guardrails, Prompt Injection, and Output Validation]]
+- [[Topic - LLM Observability and Tracing]]
 
 Practice:
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 
-Techniques:
-- [[Technique - Model Selection Scorecard]]
-- [[Technique - Eval Operations]]
+Checkpoint:
+- [[Review - AI Engineering - Evaluation, Safety, and Operations Checkpoint]]
 
-## Phase 6 - Advanced systems and agent operations
-
-Learn:
-- vLLM, PagedAttention, prefix caching, and continuous batching,
-- context engineering and prompt caching,
-- AI agent design, boundaries, and harnesses,
-- approvals and control-flow design,
-- observability and failure handling for long-running agents,
-- vector-database tradeoffs inside larger retrieval systems,
-- handoffs and deterministic workflow design,
-- MCP and tool security,
-- eval flywheels and regression gates,
-- multimodal document pipelines,
-- realtime voice systems,
-- self-hosted/personal agent architecture through the OpenClaw case study,
-- and end-to-end build patterns.
-
-Deliverables:
-- explain when modern serving is bottlenecked by queueing, prefill, decode, or cache pressure,
-- explain why larger context does not remove the need for curation,
-- decide what should stay deterministic in an agent workflow,
-- define approval, logging, and monitoring requirements for risky tools,
-- turn observed failures into regression gates,
-- separate document retrieval from page-level visual understanding,
-- explain the trust-boundary and security implications of self-hosted personal agents,
-- and sketch a voice-agent architecture with recovery behavior.
-
-Core notes:
+## Phase 4 - Advanced systems and agent operations
+Read:
 - [[Topic - Advanced Systems, Agents, Multimodal, and Voice]]
 - [[Topic - AI Agents: Design, Boundaries, and Operations]]
-- [[Topic - OpenClaw and Self-Hosted Personal Agents]]
+- [[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]]
+- [[Topic - MCP, Tool Design, and Secure Agent Execution]]
+- [[Topic - Multimodal Document and Image Pipelines]]
+- [[Topic - Realtime Voice Agents and Speech-to-Speech Systems]]
+- [[Packet - AI Engineering - Section 02 - Advanced Systems and Agent Operations]]
 
-Techniques:
-- [[Technique - Context Budgeting]]
-- [[Technique - Agent Approval Design]]
-- [[Technique - Eval Operations]]
+Checkpoint:
+- [[Review - AI Engineering - Advanced Systems and Agent Operations Checkpoint]]
+- [[Episode - AI Engineering - Section 02 - Advanced Systems and Agent Operations]]
 
-Practice:
-- [[Practice - Advanced Systems Architecture Drills]]
+## Phase 5 - Practice ladder
+Use this sequence:
+1. [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
+2. [[Practice - Benchmarking and Failure Analysis Drills]]
+3. [[Practice - RAG Diagnostics and Incident Reviews]]
+4. [[Practice - Advanced Systems Architecture Drills]]
 
-## Phase 7 - Deliberate practice and teaching compression
-
-Learn:
-- how to write short decision memos,
-- how to diagnose failures from traces and artifacts,
-- how to compress a section into a NotebookLM packet,
-- and how to connect practice back into build decisions.
-
-Deliverables:
-- write short architecture memos from ambiguous scenarios,
-- produce packet files that teach one coherent lesson,
-- and connect practice notes back into retrieval, tool, and serving decisions.
-
-## Recommended build sequence
-
+## Phase 6 - Build track
 Build in this order:
-1. small API prototype,
-2. structured output workflow,
-3. simple eval harness,
-4. simple RAG system,
-5. tool-using workflow,
-6. local or self-hosted open-weight model path,
-7. retrieval upgrade with vector database and hybrid search decisions,
-8. advanced systems module on serving, context, and orchestration,
-9. controlled agent workflow with approvals and eval operations,
-10. document or multimodal workflow,
-11. voice or realtime system if justified,
-12. end-to-end build notes with traces, evals, and rollback logic.
+1. [[Practice - End-to-End Build - Internal Research Assistant]]
+2. [[Practice - End-to-End Build - Multimodal Document Operations Copilot]]
+3. [[Practice - End-to-End Build - Approval-Gated Operations Agent]]
+
+Packet support:
+- [[Packet - AI Engineering - Build Track 01 - Internal Research Assistant]]
+- [[Packet - AI Engineering - Build Track 02 - Multimodal Document Operations Copilot]]
+- [[Packet - AI Engineering - Build Track 03 - Approval-Gated Operations Agent]]
+
+Episode tracking:
+- [[Episode - AI Engineering - Build Track 01 - Internal Research Assistant]]
+- [[Episode - AI Engineering - Build Track 02 - Multimodal Document Operations Copilot]]
+- [[Episode - AI Engineering - Build Track 03 - Approval-Gated Operations Agent]]
+
+## Finish line for a strong first pass
+
+You should be able to:
+- explain the foundations in plain language,
+- debug a simple RAG system,
+- compare models with an eval instead of vibes,
+- justify deterministic boundaries in an agent workflow,
+- and sketch one reviewable end-to-end build.
