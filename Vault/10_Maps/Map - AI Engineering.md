@@ -71,6 +71,9 @@ priority: high
 - [[Topic - Advanced Systems, Agents, Multimodal, and Voice]] (overview)
 - [[Topic - vLLM, PagedAttention, Prefix Caching, and Continuous Batching]]
 - [[Topic - Context Engineering, Prompt Caching, and Long-Context Tradeoffs]]
+- [[Topic - AI Agents: Design, Boundaries, and Operations]]
+- [[Topic - Vector Databases, Embeddings, and Retrieval Tradeoffs]]
+- [[Topic - OpenClaw and Self-Hosted Personal Agents]]
 - [[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]]
 - [[Topic - MCP, Tool Design, and Secure Agent Execution]]
 - [[Topic - Eval Flywheels, Human Review, and Regression Gates]]
@@ -83,6 +86,8 @@ priority: high
 ## Build track (first wave)
 
 - [[Practice - End-to-End Build - Internal Research Assistant]]
+- [[Practice - End-to-End Build - Multimodal Document Operations Copilot]]
+- [[Practice - End-to-End Build - Approval-Gated Operations Agent]]
 
 ## Existing practice notes
 
@@ -92,9 +97,11 @@ priority: high
 - [[Practice - RAG Diagnostics and Incident Reviews]]
 - [[Practice - Advanced Systems Architecture Drills]]
 - [[Practice - End-to-End Build - Internal Research Assistant]]
+- [[Practice - End-to-End Build - Multimodal Document Operations Copilot]]
+- [[Practice - End-to-End Build - Approval-Gated Operations Agent]]
 
 ## What to add next
 
-- the second and third build-note capstones
-- technique notes for eval operations, agent approvals, and context budgeting
-- and episode tracking notes for the new build track
+- NotebookLM packet files for the build-track capstones if you want dedicated audio-teaching versions of each build
+- a short build-track comparison note that explains when to choose the research assistant, multimodal document copilot, or approval-gated operations agent pattern
+- and a review rubric note that can be reused across capstone builds for goal clarity, dominant failure cost, eval quality, approval design, and rollback readiness
