@@ -6,7 +6,7 @@ topic: AI Engineering
 course: AI Engineering
 tags: [ai-engineering, llms, serving, evals]
 prerequisites: []
-related: [[AI Engineering - Roadmap]], [[AI Engineering - 80-20 Summary]], [[Map - AI Engineering]]
+related: [[AI Engineering - Roadmap]], [[AI Engineering - 80-20 Summary]], [[Map - AI Engineering]], [[AI Engineering Practice]]
 sources: []
 last_updated: 2026-03-11
 review_status: seed
@@ -17,11 +17,12 @@ explanatory_power: high
 difficulty: medium
 must_know: true
 ---
+
 # AI Engineering - Course Home
 
 ## Goal
 
-Become pa3sable AI engineer with enough practical understanding to:
+Become a passable AI engineer with enough practical understanding to:
 - set up and run modern LLM systems
 - understand the main engineering tradeoffs behind inference, serving, and evaluation
 - speak clearly about core terms, bottlenecks, and failure modes
@@ -32,22 +33,30 @@ Become pa3sable AI engineer with enough practical understanding to:
 
 By the end of this course, you should be able to:
 - explain core LLM and inference concepts without hand-waving
-- choose between API use, open-weight local deployment, and self-hosted serving
+- choose between API use, open-weight local deployments, and self-hosted serving
 - understand what vLLM is and why it matters
 - reason about latency, throughput, batch size, KV cache, quantization, and memory limits
-- structure simple  evals and diagnose common model failures
+- structure simple evals and diagnose common model failures
 - build a basic RAG workflow and understand where it breaks
 - understand the role of fine-tuning, adapters, and post-training choices
 - operate with sensible instincts about cost, observability, and safety
+- diagnose whether a problem should be solved with prompting, retrieval, eval work, or tuning
 
 ## How to use this course
 
 Read in this order:
 1. [[AI Engineering - 80-20 Summary]]
-2. [AI Engineering - Roadmap]]
+2. [[AI Engineering - Roadmap]]
 3. [[Map - AI Engineering]]
+4. [[AI Engineering Practice]]
 
 Then expand into topic, concept, technique, source, practice, and review notes as the course grows.
+
+A good rhythm is:
+- read one topic cluster,
+- do one matching practice note,
+- write a short decision memo or failure-analysis memo from memory,
+- then return to the map and continue.
 
 ## Main sections
 1. Foundations and vocabulary
@@ -58,8 +67,10 @@ Then expand into topic, concept, technique, source, practice, and review notes a
 6. RAG and retrieval systems
 7. Fine-tuning and adapters
 8. Production operations: cost, latency, reliability, safety
+9. Practice: decision drills, diagnostics, and incident review
 
 ## Supporting folders
+- `Vault/08_Practice/AI Engineering/` for applied drills and incident-style reps
 - `Packets/` for NotebookLM packet source files
 - `Episodes/` for episode tracking notes
 
