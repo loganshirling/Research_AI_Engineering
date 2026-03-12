@@ -11,6 +11,7 @@ related:
   - "[[AI Engineering - 80-20 Summary]]"
   - "[[Map - AI Engineering]]"
   - "[[AI Engineering Practice]]"
+  - "[[Review - AI Engineering - Course Review Checklist]]"
 sources: []
 last_updated: 2026-03-12
 review_status: researched
@@ -24,111 +25,81 @@ must_know: true
 
 # AI Engineering - Course Home
 
-## Goal
-
-Become a practical AI engineer with enough understanding to:
-- set up and run modern LLM systems,
-- reason about inference, serving, retrieval, evaluation, safety, and observability,
-- design controlled agent workflows,
-- work with multimodal documents and voice interfaces,
-- and build simple but credible end-to-end systems.
-
-## Outcome target
-
-By the end of this course, you should be able to:
-- explain core LLM and inference concepts without hand-waving,
-- choose between API use, open-weight local deployment, and self-hosted serving,
-- reason about latency, throughput, batch size, KV cache, quantization, and memory limits,
-- structure evals and diagnose failure modes,
-- build a basic retrieval workflow and understand where it breaks,
-- compare prompting, retrieval, tool use, and fine-tuning as different levers,
-- and design safer, more observable agentic systems.
-
-## How to use this course
-
-Read in this order:
+## Start here
 
 1. [[AI Engineering - 80-20 Summary]]
 2. [[AI Engineering - Roadmap]]
 3. [[Map - AI Engineering]]
 4. [[AI Engineering Practice]]
+5. [[Review - AI Engineering - Course Review Checklist]]
 
-Then expand through concepts, topics, techniques, sources, practice drills, packets, and episode notes.
+## Folder indexes
 
-A good rhythm is:
-- read one concept cluster,
-- read one related topic note,
-- do one practice note,
-- write a short decision memo from memory,
-- then return to the map.
+- Topics: `Vault/02_Topics/AI Engineering/README.md`
+- Concepts: `Vault/03_Concepts/AI Engineering/README.md`
+- Techniques: `Vault/04_Techniques/AI Engineering/README.md`
+- Sources: `Vault/06_Sources/AI Engineering/README.md`
+- Reviews: `Vault/09_Reviews/AI Engineering/README.md`
+- Packets: `Vault/01_Courses/AI Engineering/Packets/README.md`
+- Episodes: `Vault/01_Courses/AI Engineering/Episodes/README.md`
 
-## Main sections
+## Core path
 
-1. Foundations and vocabulary
-2. Inference and serving
-3. Prompting, tool use, and structured outputs
-4. Retrieval systems and RAG
-5. Evaluation and model selection
-6. Customization and fine-tuning decisions
-7. Production operations: latency, observability, and safety
-8. Advanced systems: context engineering, vector databases, agents, orchestration, MCP, multimodal, and voice
-9. Practice, packets, and end-to-end build notes
-
-## Core concept notes
-
+### Foundations
 - [[Concept - Tokens and Tokenization]]
-- [[Concept - Embeddings and Vector Similarity]]
-- [[Concept - Vector Databases, ANN Indexes, and Filtering]]
 - [[Concept - Transformer Architecture and Attention]]
 - [[Concept - Context Windows, Prefill, and Decode]]
+- [[Concept - Embeddings and Vector Similarity]]
+- [[Review - AI Engineering - Foundations Checkpoint]]
 
-## Core practitioner topic notes
-
-### Foundations already in place
+### Retrieval, evaluation, and operations
 - [[Topic - Retrieval System Design for RAG]]
 - [[Topic - Hybrid Search and Reranking]]
+- [[Topic - Eval Design for Serving Changes]]
 - [[Topic - Model Selection, Benchmarking, and Tradeoff Triage]]
-- [[Topic - Tool Calling, Structured Outputs, and Agent Loops]]
-- [[Topic - Latency Engineering for LLM Systems]]
 - [[Topic - Guardrails, Prompt Injection, and Output Validation]]
 - [[Topic - LLM Observability and Tracing]]
+- [[Review - AI Engineering - Retrieval and RAG Checkpoint]]
+- [[Review - AI Engineering - Evaluation, Safety, and Operations Checkpoint]]
 
-### Advanced systems expansion
+### Advanced systems
 - [[Topic - Advanced Systems, Agents, Multimodal, and Voice]]
-- [[Topic - Vector Databases, Embeddings, and Retrieval Tradeoffs]]
 - [[Topic - AI Agents: Design, Boundaries, and Operations]]
-- [[Topic - OpenClaw and Self-Hosted Personal Agents]]
+- [[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]]
+- [[Topic - MCP, Tool Design, and Secure Agent Execution]]
+- [[Topic - Multimodal Document and Image Pipelines]]
+- [[Topic - Realtime Voice Agents and Speech-to-Speech Systems]]
+- [[Packet - AI Engineering - Section 02 - Advanced Systems and Agent Operations]]
+- [[Episode - AI Engineering - Section 02 - Advanced Systems and Agent Operations]]
+- [[Review - AI Engineering - Advanced Systems and Agent Operations Checkpoint]]
 
-## Core techniques
+## Practice and build track
 
-- [[Technique - Model Selection Scorecard]]
-- [[Technique - Latency Budget Worksheet]]
-- [[Technique - Retrieval Triage Checklist]]
-- [[Technique - Eval Operations]]
-- [[Technique - Context Budgeting]]
-- [[Technique - Agent Approval Design]]
-
-## Practice and teaching compression
-
-- [[AI Engineering Practice]]
+### Drills
 - [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 - [[Practice - RAG Diagnostics and Incident Reviews]]
 - [[Practice - Advanced Systems Architecture Drills]]
-- [[Packet - AI Engineering - Practitioner Systems Foundations]]
-- [[Packet - AI Engineering - Section 02 - Advanced Systems and Agent Operations]]
 
-## Supporting folders
+### End-to-end builds
+- [[Practice - End-to-End Build - Internal Research Assistant]]
+- [[Practice - End-to-End Build - Multimodal Document Operations Copilot]]
+- [[Practice - End-to-End Build - Approval-Gated Operations Agent]]
 
-- `Vault/03_Concepts/AI Engineering/` for reusable foundations
-- `Vault/04_Techniques/AI Engineering/` for repeatable workflows
-- `Vault/06_Sources/AI Engineering/` for source summaries and core references
-- `Vault/08_Practice/AI Engineering/` for drills and decision reps
-- `Vault/01_Courses/AI Engineering/Packets/` for curated NotebookLM packet files
-- `Vault/01_Courses/AI Engineering/Episodes/` for episode tracking notes
+Supporting packets:
+- [[Packet - AI Engineering - Build Track 01 - Internal Research Assistant]]
+- [[Packet - AI Engineering - Build Track 02 - Multimodal Document Operations Copilot]]
+- [[Packet - AI Engineering - Build Track 03 - Approval-Gated Operations Agent]]
 
-## Definition of success
+Tracking notes:
+- [[Episode - AI Engineering - Build Track 01 - Internal Research Assistant]]
+- [[Episode - AI Engineering - Build Track 02 - Multimodal Document Operations Copilot]]
+- [[Episode - AI Engineering - Build Track 03 - Approval-Gated Operations Agent]]
 
-You are not aiming to become a frontier researcher first.
+## Definition of progress
 
-You are aiming to become dangerous in a good way: able to build, debug, compare approaches, explain tradeoffs, and ask the right next questions.
+You are improving when you can:
+- separate model problems from system-design problems,
+- define an eval before proposing a risky change,
+- justify what stays deterministic,
+- and sketch one reviewable end-to-end build.
