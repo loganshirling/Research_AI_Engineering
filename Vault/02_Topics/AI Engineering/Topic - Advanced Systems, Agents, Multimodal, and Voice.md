@@ -1,4 +1,3 @@
-
 ---
 title: Topic - Advanced Systems, Agents, Multimodal, and Voice
 type: topic
@@ -11,6 +10,9 @@ prerequisites:
   - "[[Topic - Tool Calling, Structured Outputs, and Agent Loops]]"
   - "[[Topic - Retrieval System Design for RAG]]"
 related:
+  - "[[Topic - AI Agents: Design, Boundaries, and Operations]]"
+  - "[[Topic - OpenClaw and Self-Hosted Personal Agents]]"
+  - "[[Topic - Vector Databases, Embeddings, and Retrieval Tradeoffs]]"
   - "[[Topic - vLLM, PagedAttention, Prefix Caching, and Continuous Batching]]"
   - "[[Topic - Context Engineering, Prompt Caching, and Long-Context Tradeoffs]]"
   - "[[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]]"
@@ -23,8 +25,8 @@ related:
 sources:
   - "https://arxiv.org/abs/2309.06180"
   - "https://docs.vllm.ai/en/latest/"
-  - "https://developers.openai.com/api/docs/guides/prompt-caching/"
-  - "https://www.anthropic.com/research/building-effective-agents"
+  - "https://www.anthropic.com/engineering/building-effective-agents"
+  - "https://docs.openclaw.ai/"
 last_updated: 2026-03-12
 review_status: researched
 priority: high
@@ -39,9 +41,9 @@ must_know: true
 
 ## Purpose
 
-This note is now the **overview page** for the advanced systems section of the course.
+This note is the **overview page** for the advanced systems section of the course.
 
-The original expansion grouped eight next-step topics into one module so the course could move quickly. The next stage of the course is to treat those topics as separate study units so they can support deeper notes, stronger internal linking, and more focused practice.
+The section now has enough depth that the right move is not to keep everything in one giant note. The goal is to treat the major subjects as separate study units that can support deeper notes, stronger internal linking, and more focused practice.
 
 ## Why this section matters
 
@@ -61,12 +63,15 @@ That is the layer this section covers.
 
 1. [[Topic - vLLM, PagedAttention, Prefix Caching, and Continuous Batching]]
 2. [[Topic - Context Engineering, Prompt Caching, and Long-Context Tradeoffs]]
-3. [[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]]
-4. [[Topic - MCP, Tool Design, and Secure Agent Execution]]
-5. [[Topic - Eval Flywheels, Human Review, and Regression Gates]]
-6. [[Topic - Multimodal Document and Image Pipelines]]
-7. [[Topic - Realtime Voice Agents and Speech-to-Speech Systems]]
-8. [[Topic - End-to-End AI System Case Studies and Build Patterns]]
+3. [[Topic - Vector Databases, Embeddings, and Retrieval Tradeoffs]]
+4. [[Topic - AI Agents: Design, Boundaries, and Operations]]
+5. [[Topic - OpenClaw and Self-Hosted Personal Agents]]
+6. [[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]]
+7. [[Topic - MCP, Tool Design, and Secure Agent Execution]]
+8. [[Topic - Eval Flywheels, Human Review, and Regression Gates]]
+9. [[Topic - Multimodal Document and Image Pipelines]]
+10. [[Topic - Realtime Voice Agents and Speech-to-Speech Systems]]
+11. [[Topic - End-to-End AI System Case Studies and Build Patterns]]
 
 Then use:
 - [[Practice - Advanced Systems Architecture Drills]]
@@ -90,16 +95,25 @@ The key shift is from isolated capabilities to controlled systems.
 Use [[Topic - vLLM, PagedAttention, Prefix Caching, and Continuous Batching]] to understand where modern self-hosted serving wins come from and how to reason about queueing, prefill, decode, and cache pressure.
 
 ### Context and memory
-Use [[Topic - Context Engineering, Prompt Caching, and Long-Context Tradeoffs]] to understand why long context is not the same as good context and how memory policy shapes behavior.
+Use [[Topic - Context Engineering, Prompt Caching, and Long-Context Tradeoffs]] and [[Technique - Context Budgeting]] to understand why long context is not the same as good context.
+
+### Retrieval architecture
+Use [[Topic - Vector Databases, Embeddings, and Retrieval Tradeoffs]] to understand the layer between embeddings and production retrieval systems: ANN indexes, metadata filters, hybrid search, and when vector databases help or do not help.
+
+### Agent system design
+Use [[Topic - AI Agents: Design, Boundaries, and Operations]] to reason about agent design, building, monitoring, approval flows, observability, and failure handling.
+
+### Self-hosted personal agents
+Use [[Topic - OpenClaw and Self-Hosted Personal Agents]] as a concrete case study in self-hosted agent architecture, trust boundaries, remote access, and operator control.
 
 ### Workflow control
 Use [[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]] to decide what the model should control versus what the application should hard-code.
 
 ### Tool boundaries and security
-Use [[Topic - MCP, Tool Design, and Secure Agent Execution]] to reason about permissions, trust boundaries, tool ergonomics, and agent-app risk.
+Use [[Topic - MCP, Tool Design, and Secure Agent Execution]] and [[Technique - Agent Approval Design]] to reason about permissions, trust boundaries, tool ergonomics, and agent-app risk.
 
 ### Reliability and improvement
-Use [[Topic - Eval Flywheels, Human Review, and Regression Gates]] to turn incidents and regressions into repeatable system learning.
+Use [[Topic - Eval Flywheels, Human Review, and Regression Gates]] and [[Technique - Eval Operations]] to turn incidents and regressions into repeatable system learning.
 
 ### Multimodal systems
 Use [[Topic - Multimodal Document and Image Pipelines]] to separate search, page understanding, extraction, and grounding.
@@ -113,5 +127,7 @@ Use [[Topic - End-to-End AI System Case Studies and Build Patterns]] to see how 
 ## What to read next
 
 - [[Source - Advanced Systems Expansion - Core Sources]]
+- [[Source - Agent Systems Design, Approvals, and Monitoring - Core Sources]]
+- [[Source - Vector Databases and Retrieval Tradeoffs - Core Sources]]
+- [[Source - OpenClaw - Current State, Security Model, and Deployment Notes]]
 - [[Practice - Advanced Systems Architecture Drills]]
-- [[Practice - End-to-End Build - Internal Research Assistant]]
