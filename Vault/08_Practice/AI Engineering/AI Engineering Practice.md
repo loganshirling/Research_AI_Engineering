@@ -13,8 +13,9 @@ related:
   - "[[Practice - Prompt, Retrieval, and Tuning Decision Drills]]"
   - "[[Practice - Benchmarking and Failure Analysis Drills]]"
   - "[[Practice - RAG Diagnostics and Incident Reviews]]"
+  - "[[Practice - Advanced Systems Architecture Drills]]"
 sources: []
-last_updated: 2026-03-11
+last_updated: 2026-03-12
 review_status: researched
 priority: high
 ---
@@ -36,12 +37,14 @@ The topic notes explain concepts. The practice notes force you to use those conc
 - [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
 - [[Practice - Benchmarking and Failure Analysis Drills]]
 - [[Practice - RAG Diagnostics and Incident Reviews]]
+- [[Practice - Advanced Systems Architecture Drills]]
 
 ## Suggested order
 
 1. [[Practice - Prompt, Retrieval, and Tuning Decision Drills]]
 2. [[Practice - Benchmarking and Failure Analysis Drills]]
 3. [[Practice - RAG Diagnostics and Incident Reviews]]
+4. [[Practice - Advanced Systems Architecture Drills]]
 
 ## How to use these notes
 
