@@ -71,13 +71,14 @@ A good rhythm is:
 5. Evaluation and model selection
 6. Customization and fine-tuning decisions
 7. Production operations: latency, observability, and safety
-8. Advanced systems: context engineering, orchestration, MCP, multimodal, and voice
+8. Advanced systems: context engineering, vector databases, agents, orchestration, MCP, multimodal, and voice
 9. Practice, packets, and end-to-end build notes
 
 ## Core concept notes
 
 - [[Concept - Tokens and Tokenization]]
 - [[Concept - Embeddings and Vector Similarity]]
+- [[Concept - Vector Databases, ANN Indexes, and Filtering]]
 - [[Concept - Transformer Architecture and Attention]]
 - [[Concept - Context Windows, Prefill, and Decode]]
 
@@ -94,12 +95,18 @@ A good rhythm is:
 
 ### Advanced systems expansion
 - [[Topic - Advanced Systems, Agents, Multimodal, and Voice]]
+- [[Topic - Vector Databases, Embeddings, and Retrieval Tradeoffs]]
+- [[Topic - AI Agents: Design, Boundaries, and Operations]]
+- [[Topic - OpenClaw and Self-Hosted Personal Agents]]
 
 ## Core techniques
 
 - [[Technique - Model Selection Scorecard]]
 - [[Technique - Latency Budget Worksheet]]
 - [[Technique - Retrieval Triage Checklist]]
+- [[Technique - Eval Operations]]
+- [[Technique - Context Budgeting]]
+- [[Technique - Agent Approval Design]]
 
 ## Practice and teaching compression
 
