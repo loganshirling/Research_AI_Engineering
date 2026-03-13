@@ -49,7 +49,7 @@ A good rhythm is:
 
 ### Advanced systems and capstone patterns
 - [[Topic - Advanced Systems, Agents, Multimodal, and Voice]]
-- [[Topic - AI Agents: Design, Boundaries, and Operations]]
+- [[Topic - AI Agents- Design, Boundaries, and Operations]]
 - [[Topic - Multimodal Document and Image Pipelines]]
 - [[Topic - Realtime Voice Agents and Speech-to-Speech Systems]]
 - [[Topic - End-to-End AI System Case Studies and Build Patterns]]

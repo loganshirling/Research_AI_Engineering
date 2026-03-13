@@ -1,5 +1,5 @@
 ---
-title: "Topic - AI Agents: Design, Boundaries, and Operations"
+title: "Topic - AI Agents- Design, Boundaries, and Operations"
 type: topic
 status: active
 topic: AI Agents
@@ -37,7 +37,7 @@ difficulty: hard
 must_know: true
 ---
 
-# Topic - AI Agents: Design, Boundaries, and Operations
+# Topic - AI Agents- Design, Boundaries, and Operations
 
 ## Purpose
 
