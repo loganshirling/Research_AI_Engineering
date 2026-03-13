@@ -64,7 +64,7 @@ must_know: true
 
 ### Advanced systems
 - [[Topic - Advanced Systems, Agents, Multimodal, and Voice]]
-- [[Topic - AI Agents: Design, Boundaries, and Operations]]
+- [[Topic - AI Agents- Design, Boundaries, and Operations]]
 - [[Topic - Agent Orchestration, Handoffs, and Deterministic Workflow Design]]
 - [[Topic - MCP, Tool Design, and Secure Agent Execution]]
 - [[Topic - Multimodal Document and Image Pipelines]]
