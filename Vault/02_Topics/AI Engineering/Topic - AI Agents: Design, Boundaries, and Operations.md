@@ -1,14 +1,16 @@
 ---
-title: Topic - AI Agents: Design, Boundaries, and Operations
+title: "Topic - AI Agents: Design, Boundaries, and Operations"
 type: topic
 status: active
 topic: AI Agents
 course: AI Engineering
 tags: [agents, orchestration, approvals, observability, evals, reliability]
+
 prerequisites:
   - "[[Topic - Tool Calling, Structured Outputs, and Agent Loops]]"
   - "[[Topic - LLM Observability and Tracing]]"
   - "[[Topic - Guardrails, Prompt Injection, and Output Validation]]"
+
 related:
   - "[[Topic - Advanced Systems, Agents, Multimodal, and Voice]]"
   - "[[Topic - OpenClaw and Self-Hosted Personal Agents]]"
@@ -16,6 +18,7 @@ related:
   - "[[Technique - Context Budgeting]]"
   - "[[Technique - Agent Approval Design]]"
   - "[[Source - Agent Systems Design, Approvals, and Monitoring - Core Sources]]"
+
 sources:
   - "https://www.anthropic.com/engineering/building-effective-agents"
   - "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
@@ -23,6 +26,7 @@ sources:
   - "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents"
   - "https://developers.openai.com/api/reference/resources/responses/"
   - "https://developers.openai.com/api/reference/resources/evals/methods/list"
+
 last_updated: 2026-03-12
 review_status: researched
 priority: high
@@ -99,7 +103,7 @@ Do **not** default to an agent when:
 - the blast radius is high,
 - or the system cannot yet be observed and evaluated well.
 
-A brittle “agent” often underperforms a simpler workflow with:
+A brittle "agent" often underperforms a simpler workflow with:
 - structured outputs,
 - explicit routing,
 - good retrieval,
@@ -108,9 +112,11 @@ A brittle “agent” often underperforms a simpler workflow with:
 ## Architecture layers that matter
 
 ## 1. Model layer
+
 The model handles pattern recognition, planning suggestions, synthesis, and flexible reasoning.
 
 ## 2. Harness layer
+
 The harness owns:
 - loop count,
 - time budget,
@@ -120,6 +126,7 @@ The harness owns:
 - and termination rules.
 
 ## 3. Tool layer
+
 Tools should be:
 - narrowly scoped,
 - clearly described,
@@ -127,6 +134,7 @@ Tools should be:
 - and permissioned independently.
 
 ## 4. State layer
+
 Keep durable state outside free-form prompt text when possible:
 - task records,
 - conversation history policy,
@@ -135,6 +143,7 @@ Keep durable state outside free-form prompt text when possible:
 - and logs.
 
 ## 5. Operator layer
+
 Operators need traces, metrics, incident review paths, and rollback options.
 
 ## Orchestration boundaries
@@ -201,7 +210,7 @@ Useful agent observability answers:
 - Was the failure caused by retrieval, tool use, approval, or policy?
 - Did the system recover, escalate, or silently stop?
 
-Without traces, most “agent debugging” becomes guesswork.
+Without traces, most "agent debugging" becomes guesswork.
 
 ## Failure handling and recovery
 
@@ -261,7 +270,7 @@ Use multiple agents only when the separation is carrying real operational value.
 
 ## Common mistakes
 
-1. Calling anything with tool use an “agent” and stopping the design work there.
+1. Calling anything with tool use an "agent" and stopping the design work there.
 2. Giving one agent too many tools with vague descriptions.
 3. Letting the model control permissions or execution policy.
 4. Treating longer context as a substitute for context design.
